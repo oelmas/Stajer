@@ -1,0 +1,63 @@
+sudo docker run -d --rm --Name mongoTest -p 27017:27017 -v mongodb:/data/db mongo
+
+docker exec -it mongoTest /bin/bash
+
+mongo
+
+show dbs
+
+use CatalogDb
+
+db.createCollection('Products')
+
+
+db.Products.insertMany([
+  {
+    "Name": "IPhone X",
+    "Category": "Smart Phone",
+    "Summary": "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
+    "ImageFile": "product-1.png",
+    "Price": 950
+  },
+  {
+    "Name": "Samsung 10",
+    "Category": "Smart Phone",
+    "Summary": "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
+    "ImageFile": "product-2.png",
+    "Price": 840
+  },
+  {
+    "Name": "Huawei Plus",
+    "Category": "White Appliances",
+    "Summary": "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
+    "ImageFile": "product-3.png",
+    "Price": 650
+  },
+  {
+    "Name": "Xiaomi Mi 9",
+    "Category": "White Appliances",
+    "Summary": "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
+    "ImageFile": "product-4.png",
+    "Price": 470
+  },
+  {
+    "Name": "HTC U11+ Plus",
+    "Category": "Smart Phone",
+    "Summary": "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
+    "ImageFile": "product-5.png",
+    "Price": 380
+  },
+  {
+    "Name": "LG G7 ThinQ",
+    "Category": "Home Kitchen",
+    "Summary": "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
+    "ImageFile": "product-6.png",
+    "Price": 240
+  }
+])
